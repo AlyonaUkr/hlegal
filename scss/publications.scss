@@ -1,0 +1,633 @@
+@import "variable.scss";
+@import "shablon.scss";
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    font-weight: 700;
+    src: url($font_family_path+"Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    font-weight: 400;
+    src: url($font_family_path+"Montserrat-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+// HEADER_STYLE
+
+.header {
+    width: 100%;
+    padding-top: 55px;
+}
+
+.fixe_size_conteiner {
+    max-width: 1320px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header_conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+.header_main_information {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo_wrap {
+    display: block;
+    position: absolute;
+    left: 15px;
+}
+
+.header-logo a {
+    display: block;
+}
+
+.button_menu {
+    display: none;
+}
+
+.language_conteiner {
+    display: flex;
+}
+
+.language {
+    font-family: 'Montserrat-Bold';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    color: $color_text;
+    width: 33px;
+    height: 25px;
+    padding: 5px 7px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &.active {
+        background-color: $accent_color;
+    }
+
+    &:hover {
+        background-color: $background_color;
+    }
+
+    &:active {
+        background-color: $accent_color;
+    }
+}
+
+.point {
+    width: 6px;
+    height: 6px;
+    background: $color_separator;
+    border-radius: 50%;
+    margin: 0 6px;
+}
+
+.adress {
+    font-family: 'Montserrat-Regular';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color_text;
+}
+
+.number {
+    font-family: 'Montserrat-Bold';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color_text;
+}
+
+.facebook_hover path:hover {
+    fill: $accent_color;
+}
+
+.header_nav {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+
+    .active a {
+        color: $accent_color;
+        text-decoration: underline;
+    }
+}
+
+.nav_item a {
+    font-family: 'Montserrat-Bold';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    color: $button_color;
+    text-decoration: none;
+}
+
+.nav_item a:hover {
+    text-decoration: underline;
+}
+
+.nav_item a:active {
+    color: $accent_color;
+    text-decoration: underline;
+}
+
+.nav_item:not(:last-child) {
+    margin-right: 15px;
+}
+
+// GDPR
+
+.gdpr_publication {
+    background-color: #FFFFFF;
+    padding: 60px 0;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .main-title {
+        color: $main_color;
+        margin: 30px 0 15px;
+    }
+
+    .data {
+        font-family: 'Montserrat-Regular';
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1px;
+        color: $color_text;
+    }
+
+    .line {
+        max-width: 1080px;
+        height: 4px;
+        background-color: $color_separator;
+        border: none;
+        margin: 30px 0;
+    }
+
+    .paragraph_content {
+        color: #000000;
+    }
+
+    .h2_margin {
+        margin: 30px 0;
+    }
+
+    .h3_title {
+        color: $main_color;
+    }
+
+    .numbered_list {
+        counter-reset: ol-numbers;
+
+        .item {
+            position: relative;
+            padding: 0 0 0 40px;
+            margin-top: 15px;
+        }
+
+        .item::before {
+            counter-increment: ol-numbers;
+            content: counter(ol-numbers) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            text-align: right;
+            color: $accent_color;
+            font-family: 'Montserrat-Bold';
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+
+    .margin {
+        margin-top: 30px;
+    }
+
+    .image_conteiner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+
+        .image_explanation {
+            font-family: 'Montserrat-Regular';
+            font-size: 14px;
+            line-height: 22px;
+            color: $color_text;
+            margin-top: 15px;
+            text-align: center;
+        }
+    }
+
+    .p_margin {
+        margin-top: 15px;
+    }
+
+    .icons_conteiner {
+        display: flex;
+
+        .bc_icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 42px;
+            height: 42px;
+            background-color: $background_color;
+            border-radius: 12px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $backgroung_alt;
+            }
+        }
+
+        .bc_icon:not(:last-child) {
+        margin-right: 10px;
+        }
+    }
+}
+
+.pink_gradient {
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.fixe_size_conteiner_little {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+// Section_publications
+
+.section_publications {
+    background-color: $background_color;
+    padding: 30px 0;
+
+    .margin {
+        margin-bottom: 30px;
+    }
+}
+
+.transform_link a {
+    color: $button_color;
+    text-decoration: none;
+    margin-bottom: 10px;
+
+    &:hover {
+        color: $accent_color;
+    }
+}
+
+.publication_conteiner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 30px;
+}
+
+.publication_card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: $backgroung_alt;
+        cursor: pointer;
+    }
+
+    .bc_associate {
+        background-image: url(../images/Associate.jpg);
+    }
+
+    .bc_gdpr {
+        background-image: url(../images/GDPR.jpg);
+    }
+
+    .bc_testament {
+        background-image: url(../images/Testament.jpg);
+    }
+
+    .position {
+        background-position: 50% 50%;
+        max-width: 420px;
+        min-height: 200px;
+        border-radius: 8px 8px 0px 0px;
+    }
+
+    .card_info {
+        padding: 30px;
+
+        .card_title {
+            color: $button_color;
+            margin-bottom: 15px;
+        }
+
+        .card_date {
+            font-family: 'Montserrat-Bold';
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $color_text;
+        }
+
+        .line {
+            max-width: 360px;
+            height: 4px;
+            background: $color_separator;
+            margin: 15px 0;
+            border: none;
+        }
+
+        .card_text {
+            font-family: 'Montserrat-Regular';
+            font-size: 14px;
+            line-height: 22px;
+            color: #000000;
+        }
+    }
+}
+
+.horizontal_line {
+    max-width: 1320px;
+    height: 2px;
+    background: #E6E6F0;
+    margin: 30px 0 0;
+    border: none;
+}
+
+// Footer
+
+.bc_footer {
+    background-color: $background_color;
+    padding-bottom: 30px;
+}
+
+.footer_flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_location,
+.footer_contacts {
+    display: flex;
+    align-items: center;
+}
+
+.footer_contacts {
+    margin-top: 21px;
+}
+
+.footer_adress {
+    color: $main_color;
+    font-family: 'Montserrat-Regular';
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.footer_point {
+    width: 6px;
+    height: 6px;
+    background: $color_text;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.footer_map {
+    font-family: 'Montserrat-Bold';
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $button_color;
+
+    &:hover {
+        color: $accent_color;
+    }
+}
+
+.footer_rights {
+    color: $color_text;
+}
+
+.footer_number {
+    color: $alt_color;
+}
+
+.footer_email {
+    color: $button_color;
+    text-decoration: none;
+
+    &:hover {
+        color: $accent_color;
+    }
+}
+
+.footer_rights_mobile {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+
+    .fixe_size_conteiner_little {
+        max-width: 1320px;
+        min-width: 320px;
+    }
+
+    .fixe_size_conteiner, .fixe_size_conteiner_little {
+        padding: 0 60px;
+    }
+
+    .logo_wrap {
+        display: block;
+        position: absolute;
+        left: 60px;
+    }
+
+    .publication_card {
+        background-color: #FFFFFF;
+        height: auto;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .header_conteiner {
+        align-items: flex-start;
+    }
+
+    .logo_wrap {
+        display: block;
+        position: static;
+        margin: 30px 0;
+    }
+}
+
+
+@media (max-width: 920px) {
+    .publication_conteiner {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 514px 388px;
+        grid-gap: 30px 30px;
+
+        .big-grid {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            .line {
+                max-width: 740px;
+            }
+        }
+
+        .bc_testament {
+            background-image: url(../images/TestamentBig.jpg);
+        }
+
+        .position {
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            max-width: 800px;
+            min-height: 200px;
+            border-radius: 8px 8px 0px 0px;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .header {
+        padding-top: 0;
+    }
+
+    .fixe_size_conteiner, .fixe_size_conteiner_little {
+        padding: 0 30px;
+    }
+
+    .header_main_information {
+        padding: 15px 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .point,
+    .adress,
+    .header_facebook,
+    .header_nav {
+        display: none;
+    }
+
+    .button_menu {
+        display: block;
+
+        &:hover {
+            background-color: $color_separator;
+            border-radius: 8px;
+        }
+    }
+
+    .logo_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .header-logo img {
+        width: 213px;
+        height: 57px;
+    }
+
+    .gdpr_publication {
+        padding-top: 0;
+    }
+
+    .publication_conteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .publication_card {
+            width: 420px;
+        }
+
+        .bc_testament {
+            background-image: url(../images/Testament.jpg);
+        }
+    }
+
+    .footer_point {
+        display: none;
+    }
+
+    .footer_location,
+    .footer_contacts {
+        flex-direction: column;
+    }
+
+    .footer_flex {
+        justify-content: center;
+    }
+
+    .footer_adress {
+        margin-bottom: 10px;
+    }
+
+    .footer_rights_desktope {
+        display: none;
+    }
+
+    .footer_number {
+        margin: 10px 0;
+    }
+
+    .footer_rights_mobile {
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 450px) {
+    .main-title {
+        font-family: 'Montserrat-Bold';
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .hero-title {
+        font-family: 'Montserrat-Bold';
+        font-size: 30px;
+        line-height: 37px;
+    }
+
+    .h3_title {
+        font-family: 'Montserrat-Bold';
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .publication_conteiner .publication_card {
+        width: 315px;
+    }
+}

@@ -1,0 +1,1082 @@
+@import "variable.scss";
+@import "shablon.scss";
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    font-weight: 700;
+    src: url($font_family_path+"Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    font-weight: 400;
+    src: url($font_family_path+"Montserrat-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+// HEADER_STYLE
+
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 55px;
+}
+
+.fixe_size_conteiner {
+    max-width: 1320px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header_conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+.header_main_information {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo_wrap {
+    display: block;
+    position: absolute;
+    left: 15px;
+}
+
+.header-logo a {
+    display: block;
+}
+
+.button_menu {
+    display: none;
+}
+
+.language_conteiner {
+    display: flex;
+}
+
+.language {
+    font-family: 'Montserrat-Bold';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    width: 33px;
+    height: 25px;
+    padding: 5px 7px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &.active {
+        background-color: $accent_color;
+    }
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:active {
+        background-color: $accent_color;
+    }
+}
+
+.point {
+    width: 6px;
+    height: 6px;
+    background: $color_separator;
+    border-radius: 50%;
+    margin: 0 6px;
+}
+
+.adress {
+    font-family: 'Montserrat-Regular';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.number {
+    font-family: 'Montserrat-Bold';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.facebook_hover path:hover {
+    fill: $accent_color;
+}
+
+.header_nav {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+
+    .nav_item a, .nav_item {
+        font-family: 'Montserrat-Bold';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: right;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    .nav_item {
+        cursor: pointer;
+    }
+
+    .nav_item:hover {
+        text-decoration: underline;
+    }
+
+    .nav_item:active {
+        color: $accent_color;
+        text-decoration: underline;
+    }
+
+    .nav_item a:hover {
+        text-decoration: underline;
+    }
+
+    .nav_item a:active {
+        color: $accent_color;
+        text-decoration: underline;
+    }
+
+    .nav_item:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+
+// Section_benefits
+
+.section_benefits {
+    padding-top: 376px;
+    background-image: url("../images/Symbol.svg"), $supersoft_gradient;
+    background-repeat: no-repeat;
+    background-position: top center;
+    border-radius: 0 0 12px 12px;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 98%;
+        height: 10px;
+        background-color: #CACADB;
+        position: absolute;
+        left: 1%;
+        border-radius: 0px 0px 12px 12px;
+        z-index: 3;
+    }
+}
+
+.main-title {
+    color: #FFFFFF;
+    text-align: center;
+    padding-bottom: 305px;
+}
+
+.scroll_conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.scroll {
+    background-image: url(../images/Scroll.svg);
+    background-repeat: no-repeat;
+    display: block;
+    width: 42px;
+    height: 42px;
+}
+
+.scroll:hover {
+    background-image: url(../images/Scroll_hover.svg);
+}
+
+.benefits_wrap {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.type_benefits {
+    text-align: right;
+    display: inline-block;
+
+    .hero-title a {
+        text-decoration: none;
+
+        &:hover {
+            color: $accent_color;
+        }
+    }
+}
+
+.pink {
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+}
+    
+.grey {
+    color: $color_text;
+    margin-top: 30px;
+}
+
+.vertical_line {
+    border-left: 4px solid rgba(255, 255, 255, 0.3);
+    height: 303px;
+    margin: 0 60px;
+}
+
+.benefits_info {
+    padding-top: 43px;
+    max-width: 581px;
+
+    .white {
+        color: #FFFFFF;
+    }
+}
+
+.benefits-text {
+    font-family: Montserrat-Regular;
+    font-size: 19px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-top: 30px;
+}
+
+.services_conteiner {
+    padding: 60px 0 60px;
+}
+
+.transform_link a {
+    color: $button_color;
+    text-decoration: none;
+    margin-bottom: 10px;
+
+    &:hover {
+        color: $accent_color;
+    }
+}
+
+.pink_gradient {
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+}
+
+.card {
+    width: 400px;
+    height: 321px;
+    margin-bottom: 60px;
+}
+
+.flex_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards_background {
+    width: 92px;
+    height: 92px;
+    background: #FFFFFF;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.cards_title {
+    color: $button_color;
+    margin: 30px 0 15px;
+}
+
+.cards_info {
+    color: #FFFFFF;
+}
+
+// Section_team
+
+.section_team {
+    background-color: #FFFFFF;
+    padding: 60px 0;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 96%;
+        height: 20px;
+        background-color: #E7E7F2;
+        position: absolute;
+        top: 0;
+        left: 2%;
+        border-radius: 0px 0px 12px 12px;
+        z-index: 1;
+    }
+}
+
+.team_wrap {
+    display: flex;
+    background-color: $background_color;
+    border-radius: 12px;
+
+    .bc-image {
+        background-image: url(../images/man.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 400px;
+        min-height: 344px;
+    }
+}
+
+.team_info {
+    padding: 30px;
+
+    .margin {
+        margin: 5px 0 30px;
+    }
+    
+    .hero-title {
+        max-width: 860px;
+        display: inline-block;
+    }
+
+    .name {
+        color: $color_text;
+        margin-bottom: 6px;
+    }
+
+    .post {
+        font-family: 'Montserrat-Regular';
+        font-size: 14px;
+        line-height: 22px;
+        color: $color_text;
+    }
+}
+
+.conteiner_point {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .point_active {
+        width: 16px;
+        height: 16px;
+        background: $button_color;
+        border-radius: 50%;
+    }
+
+    .point_regular {
+        width: 16px;
+        height: 16px;
+        background: #9ad1f8;
+        border-radius: 50%;
+        margin-left: 15px;
+    }
+}
+
+// Section_clients
+
+.fixe_size_conteiner_big {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title_clients {
+    color: $main_color;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.grid_clients {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bc_hillel {
+    background-color: #1C4280;
+}
+
+.bc_wannabiz {
+    background: #143646;
+}
+
+.bc_tapgerine {
+    background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+}
+
+.bc_3dlook {
+    background: #9E4DC3;
+}
+
+.bc_orangear {
+    background: #FD9339;
+}
+
+.bc_adtelligent {
+    background: #E2E2E4;
+}
+
+.bc_clickky {
+    background: #C71C36;
+}
+
+.bc_ecoleasing {
+    background: #DCF3F9;
+}
+
+.bc_infratek {
+    background: #EAEAEA;
+}
+
+.bc_citypark {
+    background: #282240;
+}
+
+.bc_artprint {
+    background: #1D4568;
+}
+
+.bc_ultimatecard {
+    background: #000000;
+}
+
+// Section_publications
+
+.section_publications {
+    background-color: $background_color;
+    padding: 30px 0;
+
+    .margin {
+        margin-bottom: 30px;
+    }
+}
+
+.publication_conteiner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 30px;
+}
+
+.publication_card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: $backgroung_alt;
+        cursor: pointer;
+    }
+
+    .bc_associate {
+        background-image: url(../images/Associate.jpg);
+    }
+
+    .bc_gdpr {
+        background-image: url(../images/GDPR.jpg);
+    }
+
+    .bc_testament {
+        background-image: url(../images/Testament.jpg);
+    }
+
+    .position {
+        background-position: 50% 50%;
+        max-width: 420px;
+        min-height: 200px;
+        border-radius: 8px 8px 0px 0px;
+    }
+
+    .card_info {
+        padding: 30px;
+
+        .card_title {
+            color: $button_color;
+            margin-bottom: 15px;
+        }
+        
+        .card_date {
+            font-family: 'Montserrat-Bold';
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $color_text;
+        }
+        
+        .line {
+            max-width: 360px;
+            height: 4px;
+            background: $color_separator;
+            margin: 15px 0;
+            border: none;
+        }
+        
+        .card_text {
+            font-family: 'Montserrat-Regular';
+            font-size: 14px;
+            line-height: 22px;
+            color: #000000;
+        }
+    }
+}
+
+.horizontal_line {
+    max-width: 1320px;
+    height: 2px;
+    background: #E6E6F0;
+    margin: 30px 0 0;
+    border: none;
+}
+
+// Modal
+
+.modal_conteiner {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #323264be;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.active-modal {
+    display: flex;
+}
+
+.modal {
+    max-width: 650px;
+    background-color: $background_color;
+    padding: 30px;
+    box-shadow: 0px 15px 80px rgba(40, 40, 86, 0.5);
+    border-radius: 12px;
+    position: relative;
+
+    .close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color_separator;
+            border-radius: 8px;
+        }
+    }
+    
+    .name,
+    .user_number,
+    .user_email {
+        height: 56px;
+    }
+        
+    .margin_name,
+    .input_user_contacts {
+        margin: 30px 0 15px;
+    }
+        
+    .input_user_contacts {
+        color: $color_text;
+    }
+        
+    .input {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        border-radius: 8px;
+        outline: none;
+        padding: 15px;
+
+        .message {
+            vertical-align: top;
+        }
+    }
+        
+    .margin_email {
+        margin: 15px 0 30px;
+    }
+        
+    .button {
+        width: 100%;
+        height: 56px;
+        background: $button_color;
+        box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+        border-radius: 12px;
+        border: none;
+        text-align: center;
+        color: #FFFFFF;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $button_hover;
+        }
+
+        &:active {
+            background-color: $button_active;
+        }
+    }
+}
+
+
+// Footer
+
+.bc_footer {
+    background-color: $background_color;
+    padding-bottom: 30px;
+}
+
+.footer_flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_location,
+.footer_contacts {
+    display: flex;
+    align-items: center;
+}
+
+.footer_contacts {
+    margin-top: 21px;
+}
+
+.footer_adress {
+    color: $main_color;
+    font-family: 'Montserrat-Regular';
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.footer_point {
+    width: 6px;
+    height: 6px;
+    background: $color_text;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.footer_map {
+    font-family: 'Montserrat-Bold';
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $button_color;
+
+    &:hover {
+        color: $accent_color;
+    }
+}
+
+.footer_rights {
+    color: $color_text;
+}
+
+.footer_number {
+    color: $alt_color;
+}
+
+.footer_email {
+    color: $button_color;
+    text-decoration: none;
+
+    &:hover {
+        color: $accent_color;
+    }
+}
+
+.footer_rights_mobile {
+    display: none;
+}
+
+@media (max-width: 1280px) {
+    .card {
+        max-width: 320px;
+        height: auto;
+    }
+
+    .benefits_info {
+        padding-top: 0;
+        max-width: 382px;
+    }
+}
+
+@media (max-width: 1100px) {
+    
+    .fixe_size_conteiner {
+        padding: 0 60px;
+    }
+
+    .logo_wrap {
+        display: block;
+        position: absolute;
+        left: 60px;
+    }
+
+    .benefits-text {
+        max-width: 405px;
+    }
+
+    .benefits_info {
+        padding-top: 0;
+    }
+
+    .card {
+        max-width: 262px;
+    }
+
+    .team_info {
+        width: 504px;
+    }
+
+    .team_wrap .bc-image {
+        background-image: url(../images/Man1100.jpg);
+        background-repeat: no-repeat;
+        background-position: top;
+        min-height: 528px;
+        border-radius: 12px 0 0 12px;
+    }
+
+    .publication_card {
+        background-color: #FFFFFF;
+        height: auto;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .header_conteiner {
+        align-items: flex-start;
+    }
+
+    .logo_wrap {
+        display: block;
+        position: static;
+        margin: 30px 0;
+    }
+
+    .section_benefits {
+        padding-top: 489px;
+    }
+
+    .benefits_wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .type_benefits {
+        display: flex;
+        overflow-x: auto;
+        width: 100%;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .hero-title {
+            min-width: max-content;
+        }
+
+        .grey {
+            margin-top: 0;
+            margin-left: 30px;
+        }
+    }
+
+    .vertical_line {
+        height: 0;
+        border-top: 4px solid rgba(255, 255, 255, 0.3);
+        width: 100%;
+        margin: 60px 0;
+    }
+
+    .benefits_info {
+        max-width: 650px;
+    }
+
+    .benefits-text {
+        max-width: 904px;
+    }
+
+    .card {
+        max-width: 294px;
+    }
+
+    .team_wrap {
+        flex-direction: column;
+    }
+
+    .team_wrap .bc-image {
+        background-image: url(../images/Man920.jpg);
+        width: 100%;
+    }
+
+    .team_info {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 920px) {
+    .grid_clients {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .publication_conteiner {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 514px 388px;
+        grid-gap: 30px 30px;
+
+        .big-grid {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            .line {
+                max-width: 740px;
+            }
+        }
+        
+        .bc_testament {
+            background-image: url(../images/TestamentBig.jpg);
+        }
+
+        .position {
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            max-width: 800px;
+            min-height: 200px;
+            border-radius: 8px 8px 0px 0px;
+        }   
+    }
+}
+
+@media (max-width: 750px) {
+    .header {
+        padding-top: 0;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 45px;
+            position: absolute;
+            background: rgba(245, 245, 250, 0.2);
+            top: 0;
+            z-index: 1;
+        }
+    }
+
+    .fixe_size_conteiner {
+        padding: 0 30px;
+    }
+
+    .header_main_information {
+        padding: 15px 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .point, .adress, .header_facebook, .header_nav {
+        display: none;
+    }
+
+    .button_menu {
+        display: block;
+            
+        &:hover {
+            background-color: rgba(245, 245, 250, 0.2);
+            border-radius: 8px;
+        }
+    }
+
+    .logo_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .header-logo img {
+        width: 70px;
+        height: 32px;
+    }
+
+    .section_benefits {
+        padding-top: 231px;
+    }
+
+    .section_benefits::after {
+        content: "";
+        width: 96%;
+        left: 2%;
+    }
+
+    .section_team::before {
+        content: "";
+        width: 92%;
+        left: 4%;
+    }
+
+    .main-title {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 159px;
+    }
+
+    .scroll_conteiner {
+        padding-bottom: 0;
+    }
+
+    .mobile_big_title {
+        font-family: 'Montserrat-Bold';
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+    }
+
+    .mobile_h2_title {
+        font-family: 'Montserrat-Bold';
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .card {
+        max-width: 400px;
+    } 
+
+    .grid_clients {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .bc_clickky, 
+    .bc_ecoleasing,
+    .bc_infratek,
+    .bc_citypark,
+    .bc_artprint,
+    .bc_ultimatecard {
+        display: none;
+    }
+
+    .mobile_height {
+        height: 120px;
+    }
+
+    .publication_conteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .publication_card {
+            width: 420px;
+        }
+
+        .bc_testament {
+            background-image: url(../images/Testament.jpg);
+        }
+    }
+
+    .footer_point {
+        display: none;
+    }
+
+    .footer_location,
+    .footer_contacts {
+        flex-direction: column;
+    }
+
+    .footer_flex {
+        justify-content: center;
+    }
+
+    .footer_adress {
+        margin-bottom: 10px;
+    }
+
+    .footer_rights_desktope {
+        display: none;
+    }
+
+    .footer_number {
+        margin: 10px 0;
+    }
+
+    .footer_rights_mobile {
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .team_wrap .bc-image {
+        background-image: url(../images/Man_mobile.jpg);
+        width: 100%;
+    }
+
+    .section_benefits::after {
+        content: "";
+        width: 94%;
+        left: 3%;
+    }
+
+    .section_team::before {
+        content: "";
+        width: 88%;
+        left: 6%;
+    }
+
+    .publication_conteiner .publication_card {
+        width: 315px;
+    }
+}
+
+@media (max-width: 364px) {
+    .mobile_big_title {
+        font-size: 22px;
+        line-height: 27px;
+    }
+}
+
+
+
